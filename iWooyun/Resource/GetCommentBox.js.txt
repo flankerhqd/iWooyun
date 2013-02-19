@@ -1,0 +1,3 @@
+var replynodes = document.getElementsByClassName("reply");
+var replynode = replynodes[replynodes.length-1];
+replynode.innerHTML;

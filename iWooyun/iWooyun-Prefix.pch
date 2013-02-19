@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'iWooyun' target in the 'iWooyun' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+typedef NS_ENUM(NSInteger, WYCellType) {
+    WYContentCell
+};
+#define WYNotificationContentLoaded    @"wy_notification_content_loaded" // 详情加载完毕
+#endif
