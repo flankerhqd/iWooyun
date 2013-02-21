@@ -10,6 +10,7 @@
 
 typedef void (^WYCallbackBlock) (NSArray *bugs, NSError *error);
 typedef void (^WYDetailCallbackBlock) (NSDictionary *detail, NSError *error);
+typedef void (^WYUpdateCallbackBlock) (NSDictionary *detail, NSError *error);
 @protocol WYService <NSObject>
 
 @required
@@ -19,5 +20,6 @@ typedef void (^WYDetailCallbackBlock) (NSDictionary *detail, NSError *error);
 +(void) getNewestUnclaimBugs:(WYCallbackBlock)block;
 +(void) getNewestBugs:(WYCallbackBlock)block;
 +(void) getNewestBugsByType:(NSString *)type :(WYCallbackBlock)block;
++(void) checkClientUpdate:(WYUpdateCallbackBlock)block;
 +(void) getBugDetailByUrl:(NSString *)url :(WYDetailCallbackBlock)block;
 @end

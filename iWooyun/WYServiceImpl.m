@@ -18,6 +18,22 @@
 
 @implementation WYServiceImpl 
 
++(void) checkClientUpdate:(WYUpdateCallbackBlock)block
+{
+    [[WYHTTPClient sharedClient] getPath:@"http://flankerhqd.github.com/iWooyun/version.json" parameters:nil
+                                 success:^(AFHTTPRequestOperation *operation, id JSON) {
+                                     if (block) {
+                                         block(JSON,nil);
+                                         ;
+                                     }
+                                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                     NSLog(@"error %@",[error description]);
+                                     if (block) {
+                                         block(nil, error);
+                                     }
+                                 }];
+
+}
 +(void) getBugDetailByUrl:(NSString *)url :(WYDetailCallbackBlock)block
 {
     [WYBugDetailImpl bugDetailBy:url withBlock:block];

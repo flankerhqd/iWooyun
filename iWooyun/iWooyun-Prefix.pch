@@ -19,4 +19,7 @@ typedef NS_ENUM(NSInteger, WYCellType) {
     WYContentCell
 };
 #define WYNotificationContentLoaded    @"wy_notification_content_loaded" // 详情加载完毕
+
+#define VERSIONNUM 1
+#define VERSIONSTR @"1.0beta"
 #endif

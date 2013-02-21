@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E31BA63F16D4FC61004A8DAF /* CheckUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31BA63E16D4FC61004A8DAF /* CheckUpdateViewController.m */; };
 		E36C9D1516D3C6C8003321B9 /* WYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D1416D3C6C8003321B9 /* WYWebViewController.m */; };
 		E36C9D1916D3D5AD003321B9 /* WYBugDetailImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D1816D3D5AD003321B9 /* WYBugDetailImpl.m */; };
 		E36C9D1C16D3D7D1003321B9 /* WYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D1B16D3D7D1003321B9 /* WYTool.m */; };
@@ -126,6 +127,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E31BA63D16D4FC61004A8DAF /* CheckUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckUpdateViewController.h; sourceTree = "<group>"; };
+		E31BA63E16D4FC61004A8DAF /* CheckUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUpdateViewController.m; sourceTree = "<group>"; };
 		E36C9D1316D3C6C8003321B9 /* WYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWebViewController.h; sourceTree = "<group>"; };
 		E36C9D1416D3C6C8003321B9 /* WYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWebViewController.m; sourceTree = "<group>"; };
 		E36C9D1716D3D5AD003321B9 /* WYBugDetailImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBugDetailImpl.h; sourceTree = "<group>"; };
@@ -462,6 +465,8 @@
 				E36C9D3316D3FCF4003321B9 /* WYLocalWebView.m */,
 				E36C9D3516D401C4003321B9 /* WYBugDetailViewController.h */,
 				E36C9D3616D401C4003321B9 /* WYBugDetailViewController.m */,
+				E31BA63D16D4FC61004A8DAF /* CheckUpdateViewController.h */,
+				E31BA63E16D4FC61004A8DAF /* CheckUpdateViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -826,6 +831,7 @@
 				E36C9D1C16D3D7D1003321B9 /* WYTool.m in Sources */,
 				E36C9D3416D3FCF4003321B9 /* WYLocalWebView.m in Sources */,
 				E36C9D3716D401C4003321B9 /* WYBugDetailViewController.m in Sources */,
+				E31BA63F16D4FC61004A8DAF /* CheckUpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,7 +900,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -922,7 +928,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
@@ -939,7 +945,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iWooyun/iWooyun-Prefix.pch";
 				INFOPLIST_FILE = "iWooyun/iWooyun-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -950,7 +958,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iWooyun/iWooyun-Prefix.pch";
 				INFOPLIST_FILE = "iWooyun/iWooyun-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

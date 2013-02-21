@@ -17,11 +17,9 @@
 @interface WYSlideController ()
 <UITableViewDataSource, UITableViewDelegate>
 
-- (void)logout;
+- (void)about;
 
-// 记录ViewController已经被载入过
-@property (nonatomic, strong)   NSMutableSet  *loadedRootViewControllers;//为什么要有这个变量？似乎没什么用
-@property (nonatomic, strong)   UIButton      *logoutButton;
+@property (nonatomic, strong)   UIButton      *aboutButton;
 
 @end
 
@@ -31,10 +29,9 @@
 
 #pragma mark - private
 
-- (void)logout
+- (void)about
 {
-    //[SFLoginService logout];
-    [self tableView:self.slideView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    //[self openURL:[[NSURL URLWithString:@"wy://update-about"] addParams:nil]];
 }
 
 #pragma mark - UITableViewDataSource
@@ -160,23 +157,22 @@
     /*if (nil == self.loadedRootViewControllers) {
      self.loadedRootViewControllers = [[NSMutableSet alloc] initWithObjects:self.items[self.currentIndex.section][self.currentIndex.row], nil];
      }*/
-    
-    if (nil == self.logoutButton) {
-        /*
-        self.logoutButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0f, self.slideView.bottom - 54.0f, 240.0f, 44.0f)];
-        [self.logoutButton setBackgroundImage:[UIImage imageNamed:@"logout_btn.png"] forState:UIControlStateNormal];
-        [self.logoutButton setBackgroundImage:[UIImage imageNamed:@"logout_btn_press.png"] forState:UIControlStateHighlighted];
+    /*
+    if (nil == self.aboutButton) {
+        self.aboutButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0f, self.slideView.bottom - 54.0f, 240.0f, 44.0f)];
+        [self.aboutButton setBackgroundImage:[UIImage imageNamed:@"logout_btn.png"] forState:UIControlStateNormal];
+        [self.aboutButton setBackgroundImage:[UIImage imageNamed:@"logout_btn_press.png"] forState:UIControlStateHighlighted];
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 220.0f, 24.0f)];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
         titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.text = @"退    出    登    录";
-        [self.logoutButton addSubview:titleLabel];
-        [self.logoutButton addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
-        [self.slideView addSubview:self.logoutButton];
-         */
+        titleLabel.text = @"更  新   &    关    于";
+        [self.aboutButton addSubview:titleLabel];
+        [self.aboutButton addTarget:self action:@selector(about) forControlEvents:UIControlEventTouchUpInside];
+        [self.slideView addSubview:self.aboutButton];
     }
+     */
     //self.logoutButton.hidden = ! [SFLoginService isLogin];
 }
 

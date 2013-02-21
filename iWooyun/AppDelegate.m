@@ -22,6 +22,7 @@
                                                                      @"WYBugsListViewController", @"wy://newestbugs",
                                                                      @"WYBugDetailViewController", @"wy://bugdetail",
                                                                      @"WYWebViewController",@"wy://webview",
+                                                                     @"CheckUpdateViewController",@"wy://update-about",
                                                                      nil]];
     self.navigator = [[WYSlideController alloc] initWithItems:@[@[
                       [[UMNavigationController alloc] initWithRootViewControllerURL:[[NSURL URLWithString:@"wy://newestbugs"]
@@ -38,7 +39,11 @@
                                                                                                 @"最新确认漏洞", @"title", nil]]],
                       [[UMNavigationController alloc] initWithRootViewControllerURL:[[NSURL URLWithString:@"wy://newestbugs?type=unclaim"]
                                                                                      addParams:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                @"等待认领漏洞", @"title", nil]]]],
+                                                                                                @"等待认领漏洞", @"title", nil]]],
+                      
+                      [[UMNavigationController alloc] initWithRootViewControllerURL:[[NSURL URLWithString:@"wy://update-about"]
+                                                                                     addParams:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                @"更新 & 关于", @"title", nil]]]],
                       @[[[UMNavigationController alloc] initWithRootViewControllerURL:[[NSURL URLWithString:@"wy://test"]
                                                                                      addParams:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                 @"登陆",@"title", nil]]],

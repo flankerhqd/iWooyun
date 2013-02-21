@@ -34,8 +34,9 @@
         self.questionView = [[WYLocalWebView alloc] initWithFrame:CGRectMake(10.0f, 0.0f, 300.0f, 44.0f)];
         self.questionView.navigator = self.navigator;
         NSString*filePath=[[NSBundle mainBundle] pathForResource:@"BugDetail.html" ofType:@"txt"];
-        NSString *detailHTML = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        [self.questionView loadHTMLString:[NSString stringWithFormat:detailHTML, [self.bugInfo objectForKey:@"content"]] baseURL:nil];
+        NSString *detailHTML = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil]; 
+        [self.questionView loadHTMLString:[NSString stringWithFormat:detailHTML, [self.bugInfo objectForKey:@"content"]] baseURL:[NSURL URLWithString:@"http://www.wooyun.org/"]];
+        //notice we may need to change the baseURL in future
     }
     /*
     if (nil == self.answerView) {

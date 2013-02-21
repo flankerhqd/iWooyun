@@ -36,7 +36,7 @@
 
     NSString *commentBox = [webView stringByEvaluatingJavaScriptFromString:commentBoxJS];
     NSString *content = [webView stringByEvaluatingJavaScriptFromString:clearpageJS];
-    
+    NSLog(@"content: %@",content);
     NSDictionary *bugInfo = [NSDictionary dictionaryWithObjectsAndKeys:
                                   commentBox, @"commentBox",
                                   content, @"content",
